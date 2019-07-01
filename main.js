@@ -24,7 +24,7 @@ user.save(function(error)
     process.exit(0);
 });
 //Consulta general
-user.find({},function(erro,docs)
+User.find({},function(erro,docs)
 {
     if(error){
         console.log(error);
@@ -35,7 +35,7 @@ user.find({},function(erro,docs)
 }
 );
 //Consulta por email
-user.find({email:'user2@ittepic.edu.mx'},function(erro,docs)
+User.find({email:'user2@ittepic.edu.mx'},function(erro,docs)
 {
     if(error){
         console.log(error);
@@ -46,7 +46,7 @@ user.find({email:'user2@ittepic.edu.mx'},function(erro,docs)
 }
 );
 //Actualizar
-user.update({_id:'5d14f31e0158731f08389032'},{$set:{email:'usernew@ittepic.edu.mx'}},
+User.update({_id:'5d14f31e0158731f08389032'},{$set:{email:'usernew@ittepic.edu.mx'}},
 function(erro,docs)
 {
     if(error){
@@ -58,7 +58,7 @@ function(erro,docs)
 }
 );
 //Eliminar
-user.findByIdAndRemove({_id:'5d14f31e0158731f08389032'},
+User.findByIdAndRemove({_id:'5d14f31e0158731f08389032'},
 function(erro,docs)
 {
     if(error){
